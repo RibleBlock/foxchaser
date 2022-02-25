@@ -23,6 +23,9 @@
         "react/jsx-filename-extension": "off",
         "react/react-in-jsx-scope": "off",
         "import/no-unresolved": "off",
-        "import/extensions": "off"
+        "import/extensions": "off",
+        "react/function-component-definition": "off",
+        "import/prefer-default-export": "off",
+        "no-unused-vars": "warn"
     }
 }
