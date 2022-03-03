@@ -14,7 +14,6 @@ export const Container = styled.aside`
     background-color: #a1a1a1;
 
     width: min(4.875rem, 20%);
-    height: 100%;
     padding: 1.5rem 0;
 
   }
