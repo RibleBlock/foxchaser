@@ -13,10 +13,9 @@ export const Container = styled.aside`
 
     background-color: #a1a1a1;
 
-    width: min(4.875rem, 20%);
+    width: 64px;
     height: 100%;
     padding: 1.5rem 0;
-
   }
 `;
 
@@ -64,8 +63,8 @@ export const WrapperGames = styled(Wrapper)`
 `;
 
 export const Avatar = styled.div`
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 
   background-color: #6a6a6a;
   border-radius: 100%;
@@ -80,8 +79,8 @@ export const Separator = styled.div<{ small?: boolean }>`
 `;
 
 const iconCSS = css`
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.625rem;
+  height: 1.625rem;
 
   background-color: #c4c4c4;
   border-radius: 100%;
@@ -89,8 +88,8 @@ const iconCSS = css`
 `;
 
 const miniIconCSS = css`
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1rem;
+  height: 1rem;
 
   background-color: #909090;
   border-radius: 100%;
