@@ -1,8 +1,6 @@
 import styled, { css } from 'styled-components';
 
-import { FoxchaserIcon } from '../../styles/Icons';
-
-export const Container = styled.aside`
+export const Container = styled.nav`
   display: none;
 
   @media (min-width: 1000px) {
@@ -14,16 +12,20 @@ export const Container = styled.aside`
     background-color: #a1a1a1;
 
     width: min(4.875rem, 8vh);
-    min-width: 57px;
+    min-width: 50px;
     height: 100%;
     padding: 1.5rem 0;
 
-  }
-`;
+    > img {
+      width: max(1.75rem, 51.3%);
+    }
 
-export const Logo = styled(FoxchaserIcon)`
-  min-width: 2.5rem;
-  min-height: 2.5rem;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -56,9 +58,16 @@ export const Wrapper = styled.div`
 export const WrapperGames = styled(Wrapper)`
   background-color: #afafaf;
   border-radius: 1.25rem;
+  min-height: 60px;
 
   padding: .5rem 0;
 
+  overflow-y: auto;
+  justify-content: flex-start;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
   /* @media (max-height: 850px) {
     height: 200px;
   } */
@@ -71,17 +80,18 @@ export const Avatar = styled.div`
   background-color: #6a6a6a;
   border-radius: 100%;
 
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: .5rem;
 
   & + div {
-    margin-bottom: 1rem;
+    margin-bottom: max(0.5rem, 20.52%);
   }
 `;
 
 export const Separator = styled.div<{ small?: boolean }>`
   width: ${(props) => (props.small ? '1rem' : '2rem')};
   height: .06rem;
+  min-height: .06rem;
   background-color: #ffffff;
 `;
 
@@ -90,7 +100,7 @@ const iconCSS = css`
   padding-top: 51.3%;
   background-color: #c4c4c4;
   border-radius: 100%;
-  margin: .5rem 0;
+  margin: max(0.25rem, 10.26%) 0;
 `;
 
 const miniIconCSS = css`
@@ -112,6 +122,4 @@ export const NotificationIcon = styled.div`${miniIconCSS}`;
 export const SupportIcon = styled.div`${miniIconCSS}
   margin: 1rem 0 .5rem 0;
 `;
-export const SettingsIcon = styled.div`${miniIconCSS}
-
-`;
+export const SettingsIcon = styled.div`${miniIconCSS}`;

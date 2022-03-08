@@ -1,11 +1,11 @@
 import React from 'react';
 
-import SideBar from './components/SideBar';
-import GlobalStyles from './styles/GlobalStyles';
+import NavBar from './components/NavBar';
+import GlobalStyles from './assets/styles/GlobalStyles';
 
 const App: React.FC = () => (
   <>
-    <SideBar />
+    <NavBar />
     <GlobalStyles />
   </>
 );

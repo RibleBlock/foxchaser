@@ -2,7 +2,6 @@ import React from 'react';
 
 import {
   Container,
-  Logo,
   Wrapper,
   WrapperGames,
   Avatar,
@@ -17,10 +16,11 @@ import {
   SupportIcon,
   SettingsIcon,
 } from './styles';
+import logo from '../../assets/images/Logo.svg';
 
-const SideBar: React.FC = () => (
+const NavBar: React.FC = () => (
   <Container>
-    <Logo />
+    <img src={logo} alt="Logo" />
 
     <Wrapper>
       <Avatar />
@@ -53,4 +53,4 @@ const SideBar: React.FC = () => (
   </Container>
 );
 
-export default SideBar;
+export default NavBar;
