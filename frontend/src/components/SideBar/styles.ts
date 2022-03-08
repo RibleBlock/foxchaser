@@ -13,9 +13,11 @@ export const Container = styled.aside`
 
     background-color: #a1a1a1;
 
-    width: 64px;
+    width: min(4.875rem, 8vh);
+    min-width: 57px;
     height: 100%;
     padding: 1.5rem 0;
+
   }
 `;
 
@@ -25,17 +27,16 @@ export const Logo = styled(FoxchaserIcon)`
 `;
 
 export const Wrapper = styled.div`
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  &:first-of-type {
-    padding-top: 1.5rem;
-  }
-  padding-bottom: 1rem;
+
   &:nth-of-type(3) {
-    padding-top: 1rem;
+    margin-top: 1rem;
 
     > div:first-of-type {
       margin-bottom: .5rem;
@@ -53,23 +54,29 @@ export const Wrapper = styled.div`
 `;
 
 export const WrapperGames = styled(Wrapper)`
-  width: 100%;
-
   background-color: #afafaf;
   border-radius: 1.25rem;
 
   padding: .5rem 0;
 
+  /* @media (max-height: 850px) {
+    height: 200px;
+  } */
 `;
 
 export const Avatar = styled.div`
-  width: 2.5rem;
-  height: 2.5rem;
+  width: max(1.87rem, 71.8%);
+  padding-top: 71.8%;
 
   background-color: #6a6a6a;
   border-radius: 100%;
 
+  margin-top: 1.5rem;
   margin-bottom: .5rem;
+
+  & + div {
+    margin-bottom: 1rem;
+  }
 `;
 
 export const Separator = styled.div<{ small?: boolean }>`
@@ -79,17 +86,16 @@ export const Separator = styled.div<{ small?: boolean }>`
 `;
 
 const iconCSS = css`
-  width: 1.625rem;
-  height: 1.625rem;
-
+  width: max(1.56rem, 51.3%);
+  padding-top: 51.3%;
   background-color: #c4c4c4;
   border-radius: 100%;
   margin: .5rem 0;
 `;
 
 const miniIconCSS = css`
-  width: 1rem;
-  height: 1rem;
+  width: max(1rem, 30.78%);
+  padding-top: 30.78%;
 
   background-color: #909090;
   border-radius: 100%;
@@ -104,8 +110,8 @@ export const SavesIcon = styled.div`${iconCSS}`;
 
 export const NotificationIcon = styled.div`${miniIconCSS}`;
 export const SupportIcon = styled.div`${miniIconCSS}
-  margin-bottom: .5rem;
+  margin: 1rem 0 .5rem 0;
 `;
 export const SettingsIcon = styled.div`${miniIconCSS}
-  padding: unset;
+
 `;
